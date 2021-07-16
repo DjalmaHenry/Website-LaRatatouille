@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<title>La Ratatouille</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/assets/restaurante.jpg");
+  min-height: 90%;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">INÍCIO</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">SOBRE</a>
+    <a href="#myMap" class="w3-bar-item w3-button">CONTATO</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Abre às 10:00 e fecha às 22:00</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span 
+    class="w3-text-white w3-hide-small" 
+    style="font-size:100px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);"><b>La<br>Ratatouille</b></span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);"><b>La<br>Ratatouille</b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Veja o menu</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">O MENU</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Principal</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Entradas</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Marguerita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$63,90</span></h1>
+      <p class="w3-text-grey">Tomates frescos, mussarela fresca, manjericão fresco</p>
+      <hr>
+   
+      <h1><b>4 Queijos</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$79,23</span></h1>
+      <p class="w3-text-grey">Queijos: Mussarela, Parmesão, Pecorino, Jarlsberg</p>
+      <hr>
+      
+      <h1><b>Galinha</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$86,90</span></h1>
+      <p class="w3-text-grey">Tomates frescos, mussarela, frango, cebola</p>
+      <hr>
+
+      <h1><b>Abacaxi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$84,34</span></h1>
+      <p class="w3-text-grey">Tomates frescos, mussarela, abacaxi fresco, bacon, manjericão fresco</p>
+      <hr>
+
+      <h1><b>Cidade grande</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">R$102,23</span></h1>
+      <p class="w3-text-grey">Tomates frescos, mussarela, pepporoni picante, linguiça picante, carne, frango</p>
+      <hr>
+
+      <h1><b>Parma</b> <span class="w3-tag w3-blue w3-round">Novo</span><span class="w3-right w3-tag w3-dark-grey w3-round">R$109,90</span></h1>
+      <p class="w3-text-grey">Tomates frescos, mussarela, parma, bacon, rúcula fresca</p>
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Ratatouille</b> <span class="w3-tag w3-green w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">R$48,00</span></h1>
+      <p class="w3-text-grey">Berinjelas, Abobrinhas, Pimentões, Tomates, Cebolas</p>
+      <hr>
+   
+      <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$74,12</span></h1>
+      <p class="w3-text-grey">Ravioli recheado com queijo</p>
+      <hr>
+      
+      <h1><b>Espaguete Clássico</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$56,23</span></h1>
+      <p class="w3-text-grey">Tomates frescos, cebolas, carne moída</p>
+      <hr>
+
+      <h1><b>Macarrão de frutos do mar</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$130,35</span></h1>
+      <p class="w3-text-grey">Salmão, camarão, lagosta, alho</p>
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Sopa de hoje</b> <span class="w3-tag w3-purple w3-round">Sazonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">R$28,11</span></h1>
+      <p class="w3-text-grey">Pergunte ao garçom</p>
+      <hr>
+   
+      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$43,45</span></h1>
+      <p class="w3-text-grey">Pão com pesto, tomate, cebola, alho</p>
+      <hr>
+      
+      <h1><b>Pão de alho</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$48,56</span></h1>
+      <p class="w3-text-grey">Ciabatta grelhada, manteiga de alho, cebola</p>
+      <hr>
+      
+      <h1><b>Tomassarela</b> <span class="w3-right w3-tag w3-dark-grey w3-round">R$53,67</span></h1>
+      <p class="w3-text-grey">Tomate e mussarela</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Sobre</h1>
+    <p>O antigo restaurante Gusteau's 5 estrelas, era referência em Paris, mas após sua falência, surgiu um pequeno rato que tornou-se o maior chef de Paris e fundou o La Ratatouille, que hoje é o maior restaurante de Paris, então se vier aqui, não se esqueça de passar em nosso restaurante e provar nosso famoso Ratatouille.</p>
+    <p><strong>Quem é o Chef?</strong> Chef Ratatouille<img src="/assets/chef.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
+    <p>Temos orgulho de nosso chef.</p>
+    <img src="/assets/gusteaus.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <h1><b>Horários de funcionamento</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Segunda & Terça FECHADO</p>
+        <p>Quarta-feira 10:00 - 22:00</p>
+        <p>Quinta-feira 10:00 - 22:00</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Sexta-feira 10:00 - 22:00</p>
+        <p>Sábado 10:00 - 22:00</p>
+        <p>Domingo 10:00 - 22:00</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/assets/ratatuille.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contato</h1>
+    <p>
+      Endereço: Disneyland Paris | La Place de Remy, 77000, Marne-la-Vallee, França
+    </p>
+    <p>Telefone: +33 1 60 30 40 50</p>
+    <p><span class="w3-tag">Atenção!</span> Devido à Pandemia da COVID-19, estamos atendendo um número limitado de pessoas presencialmente, mas também estamos prestando serviço completo por delivery. Faça já seu pedido pelo WhatsApp!
+    </p>
+    <p><a href="https://api.whatsapp.com/message/V5P5NAXCGB7HM1" target="_blank" class="w3-button w3-xxlarge w3-green">WhatsApp</a></p>
+    <p class="w3-xxlarge"><strong>Reserve</strong> uma mesa, peça o especial de hoje ou envie-nos uma mensagem:</p>
+    <form action="/" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required name="Nome"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Quantas pessoas?" required name="pessoas"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Data e hora" required name="data" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensagem/Pedido especial" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">Enviar</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Feito por <a href="https://github.com/djalmahenry" title="DjalmaHenry" target="_blank" class="w3-hover-text-green">DjalmaHenry</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
